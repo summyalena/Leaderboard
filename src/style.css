@@ -1,0 +1,53 @@
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.recentScrs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.refreshBtn {
+  display: flex;
+  width: 100px;
+  margin-top: 15px;
+  height: 25px;
+  border-radius: 0;
+}
+
+.scores-div {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid black;
+}
+
+.list {
+  list-style: none;
+  margin-left: -40px;
+  background-color: rgb(235, 233, 233);
+}
+
+.one {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: left;
+}
+
+.add-score {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.submitBtn {
+  width: 100px;
+  align-self: flex-end;
+  border-radius: 0;
+}
