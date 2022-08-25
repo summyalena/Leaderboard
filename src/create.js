@@ -1,38 +1,56 @@
+import post from './module/post';
+
 export default function Scores() {
-  const submitButton = document.querySelector('.submitBtn');
+  const refreshBtn = document.querySelector('.refreshBtn');
   const nameInput = document.querySelector('.name');
   const scoreInput = document.querySelector('.score');
+  const Form = document.querySelector('form');
 
-  const addToList = () => {
-    const scores = JSON.parse(localStorage.getItem('scores')) || [];
-    const objectScores = {
-      name: nameInput.value,
-      score: scoreInput.value,
-    };
-    scores.push(objectScores);
-    localStorage.setItem('scores', JSON.stringify(scores));
-    window.location.reload();
-  };
+  const api = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/2ehdutnghjd400irjf8nnv/scores/';
 
-  const display = () => {
-    const scores = JSON.parse(localStorage.getItem('scores')) || [];
-    scores.forEach((score) => {
-      const scoreList = document.querySelector('.scores-div');
+  const display = (data) => {
+    const scoreList = document.querySelector('.scores-div');
+    data.forEach((person) => {
       const list = document.createElement('li');
       list.classList.add('list');
       list.innerHTML = `
         <div class="one">
-        <p>${score.name}: ${score.score}</p>
+        <p>${person.user}: ${person.score}</p>
         </div>
        `;
       scoreList.appendChild(list);
     });
   };
-  display();
-  submitButton.addEventListener('click', () => {
-    if (nameInput.value && scoreInput.value === '') return;
-    addToList(nameInput.value, scoreInput.value);
-    nameInput.value = '';
-    scoreInput.value = '';
+
+  Form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = {
+      user: nameInput.value,
+      score: scoreInput.value,
+    };
+    if (nameInput.value && scoreInput.value === '');
+    post(api, data);
+    Form.reset();
+  });
+
+  const Get = async (api) => {
+    try {
+      const response = await fetch(api, {
+        method: 'GET',
+        headers: {
+          'content-Type': 'application/json',
+        },
+      });
+      const data = await response.json();
+      const finalResults = data.result;
+      display(finalResults);
+      return data;
+    } catch (error) {
+      return error;
+    }
+  };
+  refreshBtn.addEventListener('click', (e) => {
+    Get(api);
+    e.stopPropagation();
   });
 }
