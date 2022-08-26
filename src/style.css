@@ -1,4 +1,13 @@
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(125, 125, 184);
+  border-radius: 20px;
+}
+
 body {
   background-color: rgb(92, 164, 234);
   display: flex;
@@ -26,6 +35,19 @@ body {
 p {
   color: rgb(141, 141, 165);
   font-family: 'Courier New', Courier, monospace;
+  animation: slide 1s, ease-in-out 1000s forwards;
+}
+
+@keyframes slide {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .main-head h1 {
@@ -38,28 +60,27 @@ p {
 
 .recentScrs {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 10px;
   color: rgb(171, 171, 223);
 }
 
 .refreshBtn {
-  display: flex;
-  width: 100px;
-  margin-top: 15px;
-  height: 28px;
-  color: rgb(68, 68, 102);
+  color: rgba(178, 178, 218, 0.849);
   cursor: pointer;
   background: transparent;
+  font-weight: 700;
   border: 0.5px solid rgb(68, 68, 100, 0.5);
-  padding: 5px 10px;
-  transition: 1s ease-in-out;
+  padding: 0.5em 1.5em;
 }
 
 .scores-div {
   width: 100%;
   border: 0.5px solid rgb(68, 68, 102, 0.25);
   border-radius: 5px;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 .list {
@@ -123,7 +144,6 @@ p {
   align-self: flex-end;
   border-radius: 0;
   padding: 10px;
-  transition: 1s ease-in-out;
 }
 
 .submitBtn svg {
@@ -148,10 +168,10 @@ p {
 }
 
 .submitBtn span {
-  color: rgb(171, 171, 223);
+  color: rgb(189, 189, 241);
   z-index: 500;
   font-size: 18px;
-  font-weight: 100;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 768px) {
@@ -162,9 +182,9 @@ p {
   }
 
   .submitBtn {
-    width: 100%;
+    width: 110%;
     padding: 10px;
-    margin-top: -10px;
+    margin-top: -12px;
     border-radius: 10px;
   }
 
@@ -179,6 +199,7 @@ p {
   .refreshBtn {
     width: 100%;
     display: flex;
+    margin-top: -10px;
     justify-content: center;
     font-size: 15px;
     padding: 5px;
