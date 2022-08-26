@@ -1,7 +1,8 @@
 
 body {
-  background-color: rgb(92, 164, 234) ;
+  background-color: rgb(92, 164, 234);
 }
+
 .wrapper {
   display: flex;
   justify-content: space-evenly;
@@ -27,7 +28,6 @@ body {
   width: 100px;
   margin-top: 15px;
   height: 28px;
-  width: 100px;
   color: white;
   cursor: pointer;
   background: transparent;
@@ -60,9 +60,9 @@ body {
 }
 
 .add-score header {
-font-weight: 300;
-color: white;
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 300;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #form {
@@ -84,7 +84,6 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   height: 60px;
   position: absolute;
 }
-
 
 .submitBtn {
   width: 100px;
@@ -108,7 +107,6 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   transition: 1s ease-in-out;
 }
 
-
 .submitBtn:hover {
   transition: 1s ease-in-out;
   background: rgb(79, 149, 218);
@@ -125,32 +123,33 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 @media screen and (max-width: 768px) {
-   .wrapper {
+  .wrapper {
     display: flex;
     flex-direction: column;
     gap: 10px;
-   }
-   .submitBtn {
+  }
+
+  .submitBtn {
     width: 100%;
     justify-content: center;
     display: flex;
     padding: 10px;
     border-radius: 10px;
-   }
+  }
 
-   .recentScrs {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     gap: 2px;
-   }
+  .recentScrs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+  }
 
-   .refreshBtn {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      font-size: 15px;
-      padding: 5px;
-   }
+  .refreshBtn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    padding: 5px;
+  }
 }

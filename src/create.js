@@ -19,11 +19,9 @@ const Scores = () => {
     post(api, data);
     Form.reset();
   });
-
   refreshBtn.addEventListener('click', () => {
     Get(api);
-    console.log(Get(api))
   });
-}
+};
 
 export default Scores;
