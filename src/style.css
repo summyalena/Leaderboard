@@ -1,20 +1,39 @@
+
+body {
+  background-color: rgb(92, 164, 234) ;
+}
 .wrapper {
   display: flex;
   justify-content: space-evenly;
+}
+
+.main-head h1 {
+  font-weight: 600;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  justify-content: center;
+  display: flex;
+  color: white;
 }
 
 .recentScrs {
   display: flex;
   justify-content: center;
   gap: 10px;
+  color: white;
 }
 
 .refreshBtn {
   display: flex;
   width: 100px;
   margin-top: 15px;
-  height: 25px;
-  border-radius: 0;
+  height: 28px;
+  width: 100px;
+  color: white;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid rgb(211, 233, 253);
+  padding: 5px 10px;
+  transition: 1s ease-in-out;
 }
 
 .scores-div {
@@ -40,14 +59,98 @@
   gap: 5px;
 }
 
+.add-score header {
+font-weight: 300;
+color: white;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 #form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+#form input {
+  padding: 12px;
+  outline: none;
+  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  background: transparent;
+}
+
+.center {
+  width: 180px;
+  height: 60px;
+  position: absolute;
+}
+
+
 .submitBtn {
   width: 100px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid rgb(211, 233, 253);
   align-self: flex-end;
   border-radius: 0;
+  padding: 10px;
+  transition: 1s ease-in-out;
+}
+
+.submitBtn svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+
+.submitBtn:hover {
+  transition: 1s ease-in-out;
+  background: rgb(79, 149, 218);
+}
+
+.submitBtn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.submitBtn span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+   .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   }
+   .submitBtn {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+   }
+
+   .recentScrs {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 2px;
+   }
+
+   .refreshBtn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      font-size: 15px;
+      padding: 5px;
+   }
 }
