@@ -7,5 +7,4 @@ const Get = async (api) => {
   const finalResults = data.result;
   display(finalResults);
 };
-
 export default Get;

@@ -1,10 +1,25 @@
 
 body {
   background-color: rgb(92, 164, 234);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background-image: url('./images/guille-pozzi-sbcIAn4Mn14-unsplash.jpg');
 }
 
 .wrapper {
   display: flex;
+  max-width: 800px;
+  min-height: 230px;
+  padding: 35px;
+  gap: 30px;
+  background-color: rgba(255, 255, 255, 0.075);
+  border-radius: 10px;
+  border: 0.5px solid rgba(255, 255, 255, 0.096);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11px);
   justify-content: space-evenly;
 }
 
@@ -13,14 +28,14 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   justify-content: center;
   display: flex;
-  color: white;
+  color: rgb(141, 141, 165);
 }
 
 .recentScrs {
   display: flex;
   justify-content: center;
   gap: 10px;
-  color: white;
+  color: rgb(171, 171, 223);
 }
 
 .refreshBtn {
@@ -28,41 +43,47 @@ body {
   width: 100px;
   margin-top: 15px;
   height: 28px;
-  color: white;
+  color: rgb(68, 68, 102);
   cursor: pointer;
   background: transparent;
-  border: 1px solid rgb(211, 233, 253);
+  border: 0.5px solid rgb(68, 68, 100, 0.5);
   padding: 5px 10px;
   transition: 1s ease-in-out;
 }
 
 .scores-div {
   width: 100%;
-  box-sizing: border-box;
-  border: 2px solid black;
+  border: 0.5px solid rgb(68, 68, 102, 0.25);
+  border-radius: 5px;
 }
 
 .list {
   list-style: none;
-  margin-left: -40px;
-  background-color: rgb(235, 233, 233);
+  display: flex;
+  border: 0.2px solid rgb(68, 68, 102, 0.25);
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
 
-.one {
+.list-one {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-align: left;
+  display: flex;
+  width: 100%;
+  gap: 15px;
+  padding: 10px 5px;
+  color: rgb(163, 163, 223);
 }
 
 .add-score {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  color: rgb(125, 125, 184);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .add-score header {
-  font-weight: 300;
-  color: white;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 500;
 }
 
 #form {
@@ -75,8 +96,12 @@ body {
   padding: 12px;
   outline: none;
   color: white;
-  border: 2px solid rgb(255, 255, 255);
+  border: 0.3px solid rgb(68, 68, 102);
   background: transparent;
+}
+
+::placeholder {
+  color: rgb(68, 68, 102);
 }
 
 .center {
@@ -89,7 +114,7 @@ body {
   width: 100px;
   cursor: pointer;
   background: transparent;
-  border: 1px solid rgb(211, 233, 253);
+  border: 1px solid rgb(68, 68, 102);
   align-self: flex-end;
   border-radius: 0;
   padding: 10px;
@@ -101,7 +126,7 @@ body {
   left: 0;
   top: 0;
   fill: none;
-  stroke: #fff;
+  stroke: rgb(68, 68, 102);
   stroke-dasharray: 150 480;
   stroke-dashoffset: 150;
   transition: 1s ease-in-out;
@@ -109,7 +134,8 @@ body {
 
 .submitBtn:hover {
   transition: 1s ease-in-out;
-  background: rgb(79, 149, 218);
+  background: rgb(68, 68, 102);
+  color: white;
 }
 
 .submitBtn:hover svg {
@@ -117,7 +143,8 @@ body {
 }
 
 .submitBtn span {
-  color: white;
+  color: rgb(171, 171, 223);
+  z-index: 500;
   font-size: 18px;
   font-weight: 100;
 }
@@ -131,9 +158,8 @@ body {
 
   .submitBtn {
     width: 100%;
-    justify-content: center;
-    display: flex;
     padding: 10px;
+    margin-top: -10px;
     border-radius: 10px;
   }
 
