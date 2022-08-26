@@ -7,7 +7,7 @@
     "build": "webpack",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages-d dist"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/summyalena/Leaderboard/issues"
   },
-  "homepage": "https://github.com/summyalena/Leaderboard#readme",
+  "homepage": "https://summyalena.github.io/Leaderboard/",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
@@ -38,6 +38,9 @@
     "webpack-dev-server": "^4.10.0"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "file-loader": "^6.2.0",
+    "gh-pages": "^4.0.0",
+    "lodash": "^4.17.21",
+    "url-loader": "^4.1.1"
   }
 }
