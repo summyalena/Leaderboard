@@ -26,6 +26,8 @@ Deployment
 ## Run tests 
 - `npm test`
 
+## [Click here for live version](https://summyalena.github.io/Leaderboard/)
+
 ## Authors
 
 👤 **Assumpta Okolike**
