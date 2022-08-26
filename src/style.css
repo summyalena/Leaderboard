@@ -26,6 +26,19 @@ body {
 p {
   color: rgb(141, 141, 165);
   font-family: 'Courier New', Courier, monospace;
+  animation: slide 1s, ease-in-out 1000s forwards;
+}
+
+@keyframes slide {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .main-head h1 {
@@ -53,7 +66,6 @@ p {
   background: transparent;
   border: 0.5px solid rgb(68, 68, 100, 0.5);
   padding: 5px 10px;
-  transition: 1s ease-in-out;
 }
 
 .scores-div {
@@ -123,7 +135,6 @@ p {
   align-self: flex-end;
   border-radius: 0;
   padding: 10px;
-  transition: 1s ease-in-out;
 }
 
 .submitBtn svg {
@@ -162,9 +173,9 @@ p {
   }
 
   .submitBtn {
-    width: 100%;
+    width: 110%;
     padding: 10px;
-    margin-top: -10px;
+    margin-top: -12px;
     border-radius: 10px;
   }
 
@@ -179,6 +190,7 @@ p {
   .refreshBtn {
     width: 100%;
     display: flex;
+    margin-top: -10px;
     justify-content: center;
     font-size: 15px;
     padding: 5px;
