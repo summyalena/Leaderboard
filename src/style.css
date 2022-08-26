@@ -23,6 +23,10 @@ body {
   justify-content: space-evenly;
 }
 
+p {
+  color: rgb(141, 141, 165);
+  font-family: 'Courier New', Courier, monospace; 
+}
 .main-head h1 {
   font-weight: 600;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
