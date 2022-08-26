@@ -12,33 +12,40 @@
     <title>Leaderboard</title>
 </head>
 <body>
-    <header>
+    <header class="main-head">
     <h1>LEADERBOARD</h1>
     </header>
 
-    <section class="wrapper">
+    <main class="wrapper">
     <section>
-        <header class="recentScrs">
-            <h1>Recent scores</h1>
+        <div class="recentScrs">
+            <h2>Recent scores</h2>
             <button class="refreshBtn">Refresh</button>
-        </header>
+        </div>
         <ul class="scores-div">
             
         </ul>
     </section>
 
     <section class="add-score">
-       <header>
-        <h1>
+        <h3>
             Add your score
-        </h1>
-       </header>
+        </h3>
        <form id="form">
        <input type="text" aria-label="Your name" placeholder="Your name" class="name"/>
        <input type="text" aria-label="Your score" placeholder="Your score" class="score"/>
-       <button type="submit" class="submitBtn">Submit</button>
-       </form>
+       <div class="container">
+       <div class="center">
+        <button type="submit" class="submitBtn">
+        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+          </svg>
+        <span>Submit</span></button>
+    </div>
+</div>   
+    </form>
     </section>
-    </section>
+    </main>
 </body>
 </html>

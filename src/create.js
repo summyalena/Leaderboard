@@ -1,38 +1,27 @@
-export default function Scores() {
-  const submitButton = document.querySelector('.submitBtn');
+import post from './module/post';
+import Get from './module/Get';
+
+const Scores = () => {
+  const refreshBtn = document.querySelector('.refreshBtn');
   const nameInput = document.querySelector('.name');
   const scoreInput = document.querySelector('.score');
+  const Form = document.querySelector('form');
 
-  const addToList = () => {
-    const scores = JSON.parse(localStorage.getItem('scores')) || [];
-    const objectScores = {
-      name: nameInput.value,
+  const api = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/2ehdutnghjd400irjf8nnv/scores/';
+
+  Form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = {
+      user: nameInput.value,
       score: scoreInput.value,
     };
-    scores.push(objectScores);
-    localStorage.setItem('scores', JSON.stringify(scores));
-    window.location.reload();
-  };
-
-  const display = () => {
-    const scores = JSON.parse(localStorage.getItem('scores')) || [];
-    scores.forEach((score) => {
-      const scoreList = document.querySelector('.scores-div');
-      const list = document.createElement('li');
-      list.classList.add('list');
-      list.innerHTML = `
-        <div class="one">
-        <p>${score.name}: ${score.score}</p>
-        </div>
-       `;
-      scoreList.appendChild(list);
-    });
-  };
-  display();
-  submitButton.addEventListener('click', () => {
-    if (nameInput.value && scoreInput.value === '') return;
-    addToList(nameInput.value, scoreInput.value);
-    nameInput.value = '';
-    scoreInput.value = '';
+    if (nameInput.value && scoreInput.value === '');
+    post(api, data);
+    Form.reset();
   });
-}
+  refreshBtn.addEventListener('click', () => {
+    Get(api);
+  });
+};
+
+export default Scores;
