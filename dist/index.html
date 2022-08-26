@@ -5,39 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  />
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
     <title>Leaderboard</title>
 <script defer src="main.js"></script></head>
 <body>
-    <header>
+    <header class="main-head">
     <h1>LEADERBOARD</h1>
     <p>Do you think you made it to the top?</p>
     </header>
 
+    <main class="wrapper">
     <section>
-        <header>
-            <h1>Recent scores</h1>
+        <div class="recentScrs">
+            <h2>Recent scores</h2>
             <button class="refreshBtn">Refresh</button>
-        </header>
-        <div class="name-div">
+        </div>
+        <div class="scores-div">
             
         </div>
     </section>
 
     <section class="add-score">
-       <header>
-        <h1>
+        <h3>
             Add your score
-        </h1>
-       </header>
-       <form>
-       <input type="text" aria-label="Your name" placeholder="input name"/>
-       <input type="text" aria-label="Your score" placeholder="input score"/>
-       <button type="submit" class="submitBtn">Submit</button>
-       </form>
+        </h3>
+       <form id="form">
+       <input type="text" aria-label="Your name" placeholder="Input name" class="name"/>
+       <input type="text" aria-label="Your score" placeholder="Input score" class="score"/>
+       <div class="container">
+       <div class="center">
+        <button type="submit" class="submitBtn">
+        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+          </svg>
+        <span>Submit</span></button>
+    </div>
+</div>   
+    </form>
     </section>
+    </main>
 </body>
 </html>
