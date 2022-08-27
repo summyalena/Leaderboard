@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # LeaderBoard
-This is a leader board that displays scores for each name and  that was created using webpacks and ES6 format.
+This is a leader board that displays scores for each name from an API and  was created using javascript, webpacks and ES6 format.
 
 
 ## Built With
