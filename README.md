@@ -26,13 +26,16 @@ Deployment
 ## Run tests 
 - `npm test`
 
-## [Click here for live version](https://summyalena.github.io/Leaderboard/)
+### To see Live version [click here](https://summyalena.github.io/Leaderboard/)
+
+### Api consumed [click to see](https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/2ehdutnghjd400irjf8nnv/scores/)
 
 ## Authors
 
 👤 **Assumpta Okolike**
 
 - GitHub: [@summyalena](https://github.com/summyalena)
+- Twitter [@AOkolike]
 
 
 ## 🤝 Contributing
