@@ -35,7 +35,7 @@ Deployment
 👤 **Assumpta Okolike**
 
 - GitHub: [@summyalena](https://github.com/summyalena)
-- Twitter [@AOkolike]
+- Twitter [@AOkolike](https://twitter.com/AOkolike)
 
 
 ## 🤝 Contributing
