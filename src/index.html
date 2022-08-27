@@ -14,26 +14,17 @@
 <body>
     <header class="main-head">
     <h1>LEADERBOARD</h1>
+    <p>Do you think you made it to the top?</p>
     </header>
 
     <main class="wrapper">
-    <section>
-        <div class="recentScrs">
-            <h2>Recent scores</h2>
-            <button class="refreshBtn">Refresh</button>
-        </div>
-        <ul class="scores-div">
-            
-        </ul>
-    </section>
-
     <section class="add-score">
         <h3>
             Add your score
         </h3>
        <form id="form">
-       <input type="text" aria-label="Your name" placeholder="Your name" class="name"/>
-       <input type="text" aria-label="Your score" placeholder="Your score" class="score"/>
+       <input type="text" aria-label="Your name" placeholder="Input name" class="name"/>
+       <input type="text" aria-label="Your score" placeholder="Input score" class="score"/>
        <div class="container">
        <div class="center">
         <button type="submit" class="submitBtn">
@@ -45,6 +36,18 @@
     </div>
 </div>   
     </form>
+    </section>
+
+    <section>
+        <div class="recentScrs">
+            <h2>Recent scores</h2>
+            <button class="refreshBtn">Refresh</button>
+        </div>
+        <div class="scores-div">
+           <div class="bg-text">
+            refresh to see data
+           </div> 
+        </div>
     </section>
     </main>
 </body>

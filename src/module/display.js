@@ -5,8 +5,9 @@ const display = (data) => {
     const list = document.createElement('li');
     list.classList.add('list');
     list.innerHTML = `
-        <div class="one">
-        <p>${person.user}: ${person.score}</p>
+        <div class="list-one">
+        <i class="fa-solid fa-user"></i>
+        <div>${person.user}: ${person.score}</div>
         </div>
        `;
     scoreList.appendChild(list);
